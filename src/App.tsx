@@ -7,7 +7,10 @@ import Layout from './layout';
 function App() {
 	return (
 		<div className="App">
-			<Layout>{renderRoutes(routes)}</Layout>
+			<Layout>
+				{renderRoutes(routes)}
+				{/* {myGlobal} */}
+			</Layout>
 		</div>
 	);
 }

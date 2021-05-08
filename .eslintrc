@@ -1,17 +1,20 @@
 {
 	"root": true,
-
+	"parserOptions": {},
+	"plugins": ["prettier"],
 	"extends": ["alloy", "alloy/react", "alloy/typescript"],
 	"env": {
 		// Your environments (which contains several predefined global variables)
 		//
 		"browser": true,
-		"node": true
+		"node": true,
+		"es6": true
 		// mocha: true,
 		// jest: true,
 		// jquery: true
 	},
 	"globals": {
+		// 直接使用某些全局变量，因为全局变量没有该属性，所以eslint会报错
 		// Your global variables (setting to false means it"s not allowed to be reassigned)
 		//
 		// myGlobal: false
@@ -24,7 +27,7 @@
 	"rules": {
 		// Customize your rules
 		"@typescript-eslint/explicit-member-accessibility": "off",
-		"semi": "warn",
+		// "semi": "warn",
 		"no-useless-call": "warn",
 		"react/jsx-no-useless-fragment": "off"
 	}
