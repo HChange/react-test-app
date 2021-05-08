@@ -27,7 +27,7 @@
 	"rules": {
 		// Customize your rules
 		"@typescript-eslint/explicit-member-accessibility": "off",
-		// "semi": "warn",
+		"semi": "warn",
 		"no-useless-call": "warn",
 		"react/jsx-no-useless-fragment": "off"
 	}
