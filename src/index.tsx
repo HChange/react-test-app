@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-console.log('xassx')
+console.log('ces')
 
 ReactDOM.render(
 	<React.StrictMode>
