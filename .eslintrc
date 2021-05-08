@@ -1,6 +1,6 @@
 {
 	"root": true,
-	"parserOptions": {},
+	// "parserOptions": {},
 	"plugins": ["prettier"],
 	"extends": ["alloy", "alloy/react", "alloy/typescript"],
 	"env": {
