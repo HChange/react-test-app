@@ -29,6 +29,7 @@
 		"@typescript-eslint/explicit-member-accessibility": "off",
 		"semi": "warn",
 		"no-useless-call": "warn",
-		"react/jsx-no-useless-fragment": "off"
+		"react/jsx-no-useless-fragment": "off",
+		"no-console": "error"
 	}
 }
