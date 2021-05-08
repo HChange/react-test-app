@@ -1,7 +1,36 @@
 ##  DayDayUp
 
+# GFM
+
+## Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Table
+
+| a | b  |  c |  d  |
+| - | :- | -: | :-: |
+
+## Tasklist
+
+* [ ] to do
+* [x] done
+
+| a | b  |  c |  d  |
+| - | :- | -: | :-: |
 
 
+| 属性     | 类型                           | 默认值 | 说明 |
+| :--------- | :------------------------------- | :------ | :---- |
+| jsUrl\*  | 第三方应用入口文件 `.js` 文件  | String | -    |
+| cssUrl\* | 第三方应用样式文件 `.css` 文件 | String | -    |
+| id \*    | 第三方应用约定的 DOM 容器 ID   | String | -    |
+
+![img](https://exp-picture.cdn.bcebos.com/50189b40102a04e21d1215f72b7aa010bd33c204.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
 ### Time:2021.1.21
 
 - #### Git 恢复单个文件修改
@@ -26,7 +55,7 @@ package.json里面定义的是版本范围（比如^1.0.0），具体跑npm inst
 
 - #### 另类给创建的标签添加属性的方法
 
-```js
+```ts
 const script = Object.assign(document.createElement('script'), {
     	type: 'module',
     	src: URL.createObjectURL(moduleBlob),
@@ -88,7 +117,10 @@ braft-editor
 // @see https://www.npmjs.com/package/braft-extensions
 ```
 
+```shell
+rm -rf
 
+```
 
 ### Time: 2021.1.25
 
@@ -167,7 +199,7 @@ parseInt('10',2) // 2;
 
 1. ###### typescript 项目配置
 
-```bash
+```shell
 # 1、创建项目
 mkdir projectName
 
@@ -523,7 +555,7 @@ sentry   https://sentry.io/organizations/change-ae/issues/ # 简单探索了
 
 - #### 服务器搭建sentry（centOS7）
 
-```shell
+```bash
  # 参考：
     https://linoxide.com/containers/upgrade-docker-fedora-centos/
 # 安装docker
