@@ -5,14 +5,14 @@ import routes from './config/routes';
 import Layout from './layout';
 
 function App() {
-	return (
-		<div className="App">
-			<Layout>
-				{renderRoutes(routes)}
-				{/* {myGlobal} */}
-			</Layout>
-		</div>
-	);
+  return (
+    <div className="App">
+      <Layout>
+        {renderRoutes(routes)}
+        {/* {myGlobal} */}
+      </Layout>
+    </div>
+  );
 }
 
 export default App;
