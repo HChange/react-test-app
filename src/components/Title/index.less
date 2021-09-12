@@ -1,0 +1,25 @@
+@import '@/global.less';
+
+.title {
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: @primary-font-color-2;
+  line-height: 32px;
+  cursor: pointer;
+  &:hover {
+    color: @primary-color;
+    .icon {
+      color: @primary-color;
+      display: inline-block;
+    }
+  }
+  .ellipsis();
+  .icon {
+    display: none;
+    margin-left: 3px;
+    font-weight: bolder;
+    line-height: 32px;
+  }
+}

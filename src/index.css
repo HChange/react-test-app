@@ -1,4 +1,5 @@
-@import '~antd/dist/antd.css';
+@import '~highlight.js/styles/monokai.css';
+
 html,
 body,
 #root,
@@ -9,7 +10,8 @@ body,
   margin: 0;
 }
 * {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   box-sizing: border-box;
   color: #333;
 }
@@ -115,6 +117,16 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+code * {
+  color: #fefefe;
+  font-family: Consolas, 'Courier New', monospace;
+  font-weight: normal;
+  font-size: 14px;
+  font-feature-settings: 'liga' 0, 'calt' 0;
+  line-height: 19px;
+  letter-spacing: 0px;
 }
 /* HTML5 display-role reset for older browsers */
 article,

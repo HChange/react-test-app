@@ -2,10 +2,10 @@ import React, { useEffect, useMemo, useRef } from 'react';
 import MI from 'markdown-it';
 import hljs from 'highlight.js';
 import Md from '../markdown/DayDayUp.md';
-import 'highlight.js/styles/monokai.css';
+// import 'highlight.js/styles/monokai.css';
 // import javascript from 'highlight.js/lib/languages/javascript';
 // import shell from 'highlight.js/lib/languages/shell';
-import Page from 'src/components/Page';
+import { Page } from '@/components';
 // hljs.registerLanguage('javascript', javascript);
 // hljs.registerLanguage('shell', shell);
 

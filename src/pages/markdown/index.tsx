@@ -1,19 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './components/CodeBlock';
 import Md from './DayDayUp.md';
 import gfm from 'remark-gfm';
 import HeadingBlock from './components/HeadingBlock';
-import Page from 'src/components/Page';
+import { Page } from '@/components';
 const Markdown = () => {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (!hash) return;
-    const a = document.createElement('a');
-    a.href = hash;
-    a.click();
-    a.remove();
-  }, []);
   return (
     <Page>
       <ReactMarkdown

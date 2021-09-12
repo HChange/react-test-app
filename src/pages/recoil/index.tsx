@@ -1,5 +1,5 @@
 import React from 'react';
-import Page from 'src/components/Page';
+import { Page } from '@/components';
 import Async from './components/Async';
 import Count from './components/Count';
 import InputCom from './components/InputCom';

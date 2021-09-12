@@ -1,29 +1,35 @@
-import { Button } from 'antd';
-import React, { useState } from 'react';
-
-const index = () => {
-  const [open, setOpen] = useState(false);
-  console.log('render');
-
-  let arr = [1, 2, 3, 4];
+import React from 'react';
+import { Page, Block } from '@/components';
+import AnchorPoint from '@/components/AnchorPoint';
+import { Marked } from '@/components/Marked';
+const Text = () => {
   return (
-    <div>
-      <Button onClick={() => setOpen(!open)}>Toggle</Button>
-      <div style={open ? { background: 'blue', backgroundColor: 'red' } : { backgroundColor: 'red' }}>
-        show show show !!!!【测试style冲突，react警告⚠️】
-      </div>
-      {arr.map((item) => {
-        return <li key={item}>{item}</li>;
-      })}
-      <Button
-        onClick={() => {
-          arr = [...arr, 5];
-        }}
-      >
-        测试render
-      </Button>
-    </div>
+    <Page>
+      <div style={{ height: '1800px' }} />
+      <Block title="useEffect&useLayoutEffect区别">123</Block>
+      <div style={{ height: '1800px' }} />
+      <AnchorPoint to="useEffect&useLayoutEffect区别">前往</AnchorPoint>
+
+      <Marked type="javascript">{`
+				import React, { useState } from 'react';
+				import { Page, Block } from '@/components';
+				import AnchorPoint from '@/components/AnchorPoint';
+				import { Marked } from '@/components/Marked';
+				const Text = () => {
+					return (
+						<Page>
+							<div style={{ height: '1800px' }} />
+							<Block title='useEffect&useLayoutEffect区别'>123</Block>
+							<div style={{ height: '1800px' }} />
+							<AnchorPoint to='useEffect&useLayoutEffect区别'>前往</AnchorPoint>
+						</Page>
+					);
+				};
+
+				export default Text;
+			`}</Marked>
+    </Page>
   );
 };
 
-export default index;
+export default Text;

@@ -1,17 +1,38 @@
+@import '@/global.less';
+
 .wrapper {
-  // background-color: red;
   width: 100%;
-  padding: 20px 80px;
-  overflow: scroll;
+  padding: 20px 40px;
+  overflow-y: scroll;
   height: 100%;
-  background: #f5f5d5;
+  background: @primary-bg-color;
+  min-width: 600px;
   .page {
+    background-color: #f5f5d5;
     width: 100%;
-    border-radius: 4px;
-    padding: 40px 20px;
-    border: 1px solid #ccc;
-  }
-  &::-webkit-scrollbar {
-    display: none;
+    min-height: 100%;
+    border-radius: 2px;
+    padding: 0px 20px;
+    border: 1px solid rgba(253, 165, 0, 0);
+    box-shadow: 8px 8px 18px @weak-font-color;
+    display: flex;
+    flex-direction: column;
+    .title {
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      font-size: 24px;
+      font-weight: bolder;
+      border-bottom: 1px @weak-font-color dashed;
+      .ellipsis();
+    }
+    .content {
+      margin: 20px 0;
+      flex: 1;
+    }
+    .footer {
+      height: 40px;
+      border-top: 1px @weak-font-color dashed;
+    }
   }
 }
