@@ -1,7 +1,8 @@
-import React from 'react';
 import { renderRoutes } from 'react-router-config';
 
 const About = (props: any) => {
+  console.log('render');
+
   return (
     <>
       <div

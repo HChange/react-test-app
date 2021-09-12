@@ -2,7 +2,6 @@ node_modules/
 /scripts/
 /public/
 /config/
-# 下面两句结合的意思：1、所有 test.xx文件 2、
 test.*
 !/src/**/test.*
 
