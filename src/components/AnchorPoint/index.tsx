@@ -1,4 +1,4 @@
-import { scrollIntoView } from '@/pages/utils';
+import { scrollIntoView } from '@/utils';
 import React from 'react';
 
 /**

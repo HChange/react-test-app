@@ -1,4 +1,4 @@
-import { scrollIntoView } from '@/pages/utils';
+import { scrollIntoView } from '@/utils';
 import React, { useRef } from 'react';
 import styles from './index.less';
 

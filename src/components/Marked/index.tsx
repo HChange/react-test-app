@@ -12,7 +12,9 @@ const Marked = (props: MarkedProps) => {
       marked.setOptions({
         renderer: new marked.Renderer(),
         highlight: function (code) {
-          return '<pre class="hljs"><code>' + hljs.highlightAuto(code, [type]).value + '</code></pre>';
+          return (
+            '<pre class="hljs"><code>' + hljs.highlightAuto(code, type ? [type] : undefined).value + '</code></pre>'
+          );
         },
         pedantic: false,
         gfm: true,
@@ -26,7 +28,12 @@ const Marked = (props: MarkedProps) => {
       dom.current.innerHTML = markedContent;
     }
   }, [children, type, dom]);
-  return <div ref={dom} />;
+  return (
+    <div>
+      <div ref={dom} />
+      <div>copy</div>
+    </div>
+  );
 };
 
 export { Marked };

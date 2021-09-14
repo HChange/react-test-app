@@ -4,6 +4,7 @@
 
   "rules": {
     "spaced-comment": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "max-params": "off"
   }
 }
