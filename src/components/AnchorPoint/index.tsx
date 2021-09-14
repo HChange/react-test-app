@@ -10,9 +10,10 @@ const AnchorPoint: React.FC<{ to: string }> = (props) => {
 
   const goAction = () => {
     const point = document.getElementById(to);
-    console.warn(`找不到 “${to}” 相关锚点`);
     if (point) {
       scrollIntoView(point);
+    } else {
+      console.warn(`找不到 “${to}” 相关锚点`);
     }
     window.location.hash = to;
   };
