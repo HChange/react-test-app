@@ -1,0 +1,40 @@
+@import '@/global.less';
+
+.marked {
+  padding: 20px 0;
+  &-content {
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    overflow: hidden;
+    & > div > pre {
+      font-size: 0;
+    }
+    &:hover &__copy {
+      display: block;
+    }
+    &__copy {
+      display: none;
+      position: absolute;
+      font-size: 12px;
+      background-color: rgba(248, 38, 114, 0.5);
+      right: 10px;
+      top: 10px;
+      width: 42px;
+      height: 24px;
+      // border: 1px solid red;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 24px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(248, 38, 114, 0.8);
+      }
+      &:active {
+        background-color: rgba(248, 38, 114, 1);
+      }
+    }
+  }
+}
