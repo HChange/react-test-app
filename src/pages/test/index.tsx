@@ -2,7 +2,7 @@ import React, { useState, useRef, useImperativeHandle, useCallback } from 'react
 import { Page, Block } from '@/components';
 import AnchorPoint from '@/components/AnchorPoint';
 import { Marked } from '@/components/Marked';
-import codeString from './useEffect_useLayoutEffect/_index.code';
+import codeString from './useEffect/_index.code';
 
 const FancyInput = React.forwardRef((props, ref) => {
   const [fresh, setFresh] = useState(false);

@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');//解析需要遍历的文件夹
-const filePath = path.resolve(__dirname,'../src');
+const colors = require('colors');
+const rootPath = path.resolve(__dirname,'../src');
 
 //调用文件遍历方法
-fileDisplay(filePath);
+fileDisplay(rootPath);
 //文件遍历方法
 function fileDisplay(filePath){
     //根据文件路径读取文件，返回文件列表
@@ -23,8 +24,6 @@ function fileDisplay(filePath){
                         const isFile = stats.isFile();//是文件
                         const isDir = stats.isDirectory();//是文件夹
                         if(isFile&&filename.startsWith('_')&&!/\.code\./.test(filename)){
-                            console.log(filedir);
-														console.log(filename);
 														// 读取文件内容
 														let content = fs.readFileSync(filedir, 'utf-8');
 														// 编辑内容
@@ -32,7 +31,7 @@ function fileDisplay(filePath){
 														const  templateArr = filename.split('.');
 														templateArr.splice(templateArr.length-1,1,'code.ts');
 														 const targetName = templateArr.join('.');
-														 console.log(targetName);
+														 console.log(`./src${filedir.replace(rootPath,'')}`.blue+` >>>>>>>>>>>>>> `.red+`./src${path.resolve(filePath,targetName).replace(rootPath,'')}`.blue);
                             fs.writeFileSync(path.resolve(filePath,targetName),content);
                         }
                         if(isDir){
