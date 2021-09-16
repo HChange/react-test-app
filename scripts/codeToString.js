@@ -31,7 +31,7 @@ function fileDisplay(filePath){
 														const  templateArr = filename.split('.');
 														templateArr.splice(templateArr.length-1,1,'code.ts');
 														 const targetName = templateArr.join('.');
-														 console.log(`./src${filedir.replace(rootPath,'')}`.blue+` >>>>>>>>>>>>>> `.red+`./src${path.resolve(filePath,targetName).replace(rootPath,'')}`.blue);
+														 console.log(`./src${filedir.replace(rootPath,'')}`.blue+` -> `.red+`./src${path.resolve(filePath,targetName).replace(rootPath,'')}`.blue);
                             fs.writeFileSync(path.resolve(filePath,targetName),content);
                         }
                         if(isDir){

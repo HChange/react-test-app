@@ -17,7 +17,7 @@ const Marked = (props: MarkedProps) => {
   const [copyText, setCopyText] = useState('复制');
   useEffect(() => {
     if (children) {
-      setCode(children.match(reg)?.[0] || '');
+      setCode(children.match(reg)?.[1] || '');
       marked.setOptions({
         renderer: new marked.Renderer(),
         highlight: function (code) {
