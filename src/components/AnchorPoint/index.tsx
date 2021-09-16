@@ -20,4 +20,4 @@ const AnchorPoint: React.FC<{ to: string }> = (props) => {
   return <div onClick={goAction}>{children}</div>;
 };
 
-export default AnchorPoint;
+export { AnchorPoint };
