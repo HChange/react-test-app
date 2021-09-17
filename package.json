@@ -23,6 +23,7 @@
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "classnames": "^2.3.1",
+    "commitizen": "^4.2.4",
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -122,6 +123,7 @@
     "@typescript-eslint/parser": "^4.22.1",
     "colors": "^1.4.0",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.26.0",
     "eslint-config-alloy": "^4.1.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -201,5 +203,10 @@
     "src/**/*.{js,jsx}": [
       "eslint --fix --max-warnings 0"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
