@@ -33,6 +33,7 @@ const index = () => {
       <div>
         useEffect: <button onClick={handleClick1}>{count1}</button>
       </div>
+
       <div>
         useLayoutEffect: <button onClick={handleClick2}>{count2}</button>
       </div>

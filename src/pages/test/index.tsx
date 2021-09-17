@@ -1,6 +1,6 @@
 import React from 'react';
 import { Marked, CodeViewer, Page, Block } from '@/components';
-import codeString from './useEffect/_index.code';
+import codeString from './useEffect/_index.tsx.code';
 import Effect from './useEffect/_index';
 
 const Text = () => {
