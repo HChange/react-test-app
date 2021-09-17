@@ -38,6 +38,32 @@ function buildFile(filePath,targetPath){
 		fs.writeFileSync(targetPath,content);
 }
 
+// 监听文件变化
+function watchChange(){
+	console.log("Watch...".blue);
+	fs.watch(rootPath, { recursive: true }, (eventType, file) => {
+    if (file) {
+			const absolutePath = path.resolve(rootPath,file)
+			fs.stat(absolutePath,function(eror, stats){
+				if(eror){
+					console.warn('获取文件stats失败');
+				}else{
+					const filePathArr = absolutePath.split('/');
+					const filename = filePathArr.pop();
+					const isFile = stats.isFile();//是文件
+					if(isFile&&filename.startsWith('_')&&!/\.code\.ts$/.test(filename)){
+								console.log("Watcher:".green,`./src/${file}`.blue+"("+`${eventType}`.red+")");
+								// 获取目标文件文件名
+								 const targetName = filename+'.code.ts';
+								 const targetPath = path.resolve(filePathArr.join('/'),targetName);
+								buildFile(absolutePath,targetPath)
+							}
+					}
+			})
+    }
+});
+}
+
 
 //文件遍历方法
 function fileDisplay(dirPath){
@@ -88,3 +114,6 @@ function fileDisplay(dirPath){
 
 //调用文件遍历方法
 fileDisplay(rootPath);
+if(process.env.WATCH==="true"){
+	watchChange();
+}
