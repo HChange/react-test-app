@@ -1,11 +1,12 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import About from 'src/pages/About';
-import Markdown from 'src/pages/markdown';
-import MarkdownIt from 'src/pages/markdown-it';
-import RecoilTest from 'src/pages/recoil/index';
-import Test from 'src/pages/test/index';
+import About from '@/pages/About';
+import Markdown from '@/pages/markdown';
+import MarkdownIt from '@/pages/markdown-it';
+import RecoilTest from '@/pages/recoil/index';
+import Test from '@/pages/test/index';
+import VirtualList from '@/pages/virtuallist';
 
 const routes: RouteConfig[] = [
   {
@@ -37,6 +38,11 @@ const routes: RouteConfig[] = [
     path: '/recoil',
     component: RecoilTest,
     name: 'recoil',
+  },
+  {
+    path: '/virtuallist',
+    component: VirtualList,
+    name: '虚拟长列表',
   },
 ];
 
