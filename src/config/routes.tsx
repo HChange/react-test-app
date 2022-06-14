@@ -7,6 +7,7 @@ import MarkdownIt from '@/pages/markdown-it';
 import RecoilTest from '@/pages/recoil/index';
 import Test from '@/pages/test/index';
 import VirtualList from '@/pages/virtuallist';
+import JsonDownload from '@/pages/json-download';
 
 const routes: RouteConfig[] = [
   {
@@ -43,6 +44,11 @@ const routes: RouteConfig[] = [
     path: '/virtuallist',
     component: VirtualList,
     name: '虚拟长列表',
+  },
+  {
+    path: '/json-download',
+    component: JsonDownload,
+    name: 'JSON下载',
   },
 ];
 
