@@ -1,7 +1,5 @@
 
-/* eslint-disable */
-const codeString = `
-\`\`\`
+```JavaScript
 import React, { useState } from 'react';
 
 const index = () => {
@@ -47,7 +45,4 @@ const index = () => {
 
 export default index;
 
-\`\`\`
-`;
-export default codeString;
-/* eslint-enable */
+```

@@ -1,1 +1,2 @@
-declare const myGlobal: string;
+// declare const myGlobal: string;
+declare module 'faker';
