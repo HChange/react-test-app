@@ -16,16 +16,29 @@ const JsonDownload = () => {
     xhr.onload = function () {
       if (this.status === 200) {
         const blob = this.response;
-        const reader = new FileReader();
-        // blob ==> base64
-        reader.readAsDataURL(blob);
-        reader.onload = function (e) {
-          const a = document.createElement('a');
-          a.download = 'test.json';
-          a.href = e.target?.result as string;
-          a.click();
-          a.remove();
-        };
+
+        let eleLink = document.createElement('a');
+        eleLink.download = 'data.json';
+        eleLink.style.display = 'none';
+
+        eleLink.href = URL.createObjectURL(blob);
+        // 触发点击
+        document.body.appendChild(eleLink);
+        eleLink.click();
+        // 然后移除
+        document.body.removeChild(eleLink);
+
+        /** 方法二 */
+        // const reader = new FileReader();
+        // // blob ==> base64
+        // reader.readAsDataURL(blob);
+        // reader.onload = function (e) {
+        //   const a = document.createElement('a');
+        //   a.download = 'test.json';
+        //   a.href = e.target?.result as string;
+        //   a.click();
+        //   a.remove();
+        // };
       }
     };
     // 发送请求
