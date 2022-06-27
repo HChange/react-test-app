@@ -14,7 +14,7 @@ const About = (props: any) => {
           alignItems: 'center',
         }}
       >
-        开发中...
+        进度：流水线测试...
       </div>
       {renderRoutes(props.route.routes)}
     </>
