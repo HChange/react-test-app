@@ -5,6 +5,7 @@ import styles from './index.less';
 import { RouteConfig } from 'react-router-config';
 
 const Layout: React.FC<{}> = (props) => {
+  // 根据hash定位页面滚动位置
   useEffect(() => {
     const hash = window.location.hash;
     if (!hash) return;
@@ -14,7 +15,8 @@ const Layout: React.FC<{}> = (props) => {
     a.remove();
   }, []);
 
-  const createLink = (routes: RouteConfig[]) => {
+  // 左侧导航栏
+  const createNav = (routes: RouteConfig[]) => {
     return (
       <ul>
         {routes.map(({ name, path, routes }) => {
@@ -37,11 +39,14 @@ const Layout: React.FC<{}> = (props) => {
   return (
     <div className={styles.wrapper}>
       <BrowserRouter>
-        <div className={styles.nav}>
+        <header className={styles.header}>
           <div className={styles.logo}>Change Test</div>
-          {createLink(routes)}
-        </div>
-        <div className={styles.content}>{props.children}</div>
+        </header>
+        <main className={styles.main}>
+          <nav className={styles.nav}>{createNav(routes)}</nav>
+          <article className={styles.content}>{props.children}</article>
+        </main>
+        {/* <footer className={styles.footer} /> */}
       </BrowserRouter>
     </div>
   );

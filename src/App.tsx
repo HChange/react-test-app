@@ -7,9 +7,7 @@ import Layout from './layout';
 function App() {
   return (
     <RecoilRoot>
-      <div className="App">
-        <Layout>{renderRoutes(routes)}</Layout>
-      </div>
+      <Layout>{renderRoutes(routes)}</Layout>
     </RecoilRoot>
   );
 }

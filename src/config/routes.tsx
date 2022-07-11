@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import About from '@/pages/About';
+import about from '@/pages/about';
 import Markdown from '@/pages/markdown';
 import MarkdownIt from '@/pages/markdown-it';
 import RecoilTest from '@/pages/recoil/index';
@@ -17,7 +17,7 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/about',
-    component: About,
+    component: about,
     name: '关于',
   },
   {
@@ -38,7 +38,7 @@ const routes: RouteConfig[] = [
   {
     path: '/recoil',
     component: RecoilTest,
-    name: 'recoil',
+    name: 'Recoil',
   },
   {
     path: '/virtuallist',
@@ -48,7 +48,7 @@ const routes: RouteConfig[] = [
   {
     path: '/json-download',
     component: JsonDownload,
-    name: 'JSON下载',
+    name: 'Json下载',
   },
 ];
 

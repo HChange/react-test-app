@@ -542,16 +542,17 @@ module.exports = function (webpackEnv) {
                 'sass-loader'
               ),
             },
+						// 均使用module模式
             {
               test: lessRegex,
-              exclude: lessModuleRegex,
+              // exclude: lessModuleRegex,
               use: getStyleLoaders(
                 {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
-                    // localIdentName: '[local]_[hash:base64:5]'
+                    // getLocalIdent: getCSSModuleLocalIdent,
+                    localIdentName: isEnvDevelopment?'[path][name]_[local]__[hash:base64:5]':'[local]__[hash:base64:5]'
                   },
                 },
                 'less-loader'
@@ -564,20 +565,20 @@ module.exports = function (webpackEnv) {
             },
             // Adds support for CSS Modules, but using LESS
             // using the extension .module.less or .module.less
-            {
-              test: lessModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 2,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
-                  modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
-                    // localIdentName: '[local]_[hash:base64:5]'
-                  },
-                },
-                'less-loader'
-              ),
-            },
+            // {
+            //   test: lessModuleRegex,
+            //   use: getStyleLoaders(
+            //     {
+            //       importLoaders: 2,
+            //       sourceMap: isEnvProduction && shouldUseSourceMap,
+            //       modules: {
+            //         // getLocalIdent: getCSSModuleLocalIdent,
+            //         localIdentName: '[path]_[hash:base64:8]'
+            //       },
+            //     },
+            //     'less-loader'
+            //   ),
+            // },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.
