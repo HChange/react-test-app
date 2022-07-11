@@ -9,49 +9,44 @@ import Test from '@/pages/test/index';
 import VirtualList from '@/pages/virtuallist';
 import JsonDownload from '@/pages/json-download';
 
-const is_github = window.IS_GITHUB === 'true';
-const getCurrentLink = (link: string) => {
-  return is_github ? `/react-test-app${link}` : link;
-};
-
 const routes: RouteConfig[] = [
   {
     path: '/',
     exact: true,
-    render: () => <Redirect to={{ pathname: getCurrentLink('/about') }} />,
+    render: () => <Redirect to={{ pathname: '/about' }} />,
   },
   {
-    path: getCurrentLink('/about'),
+    path: '/about',
     component: About,
     name: '关于',
   },
   {
-    path: getCurrentLink('/test'),
+    path: '/test',
     component: Test,
     name: '测试',
   },
   {
-    path: getCurrentLink('/markdown'),
+    path: '/markdown',
     component: Markdown,
     name: 'Markdown',
   },
   {
-    path: getCurrentLink('/markdown-it'),
+    path: '/markdown-it',
     component: MarkdownIt,
     name: 'MarkdownIt',
   },
   {
-    path: getCurrentLink('/recoil'),
+    path: '/recoil',
     component: RecoilTest,
     name: 'Recoil',
   },
   {
-    path: getCurrentLink('/virtuallist'),
+    path: '/virtuallist',
     component: VirtualList,
     name: '虚拟长列表',
   },
   {
-    path: getCurrentLink('/json-download'),
+    path: '/json-download',
     component: JsonDownload,
     name: 'Json下载',
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './components/CodeBlock';
-import Md from './DayDayUp.md';
+import Md from '../README.md';
 import gfm from 'remark-gfm';
 import HeadingBlock from './components/HeadingBlock';
 import { Page } from '@/components';
