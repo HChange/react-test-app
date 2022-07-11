@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import about from '@/pages/about';
+import About from '@/pages/about';
 import Markdown from '@/pages/markdown';
 import MarkdownIt from '@/pages/markdown-it';
 import RecoilTest from '@/pages/recoil/index';
@@ -17,7 +17,7 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/about',
-    component: about,
+    component: About,
     name: '关于',
   },
   {
