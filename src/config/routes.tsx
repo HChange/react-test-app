@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import About from '@/pages/about';
 import Markdown from '@/pages/markdown';
+import About from '@/pages/about';
 import MarkdownIt from '@/pages/markdown-it';
 import RecoilTest from '@/pages/recoil/index';
 import Test from '@/pages/test/index';
