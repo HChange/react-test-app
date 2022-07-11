@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
@@ -6,6 +7,7 @@ declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test';
     readonly PUBLIC_URL: string;
+    readonly IS_GITHUB: 'true' | 'false';
   }
 }
 
@@ -40,20 +42,18 @@ declare module '*.png' {
 }
 
 declare module '*.webp' {
-    const src: string;
-    export default src;
+  const src: string;
+  export default src;
 }
 declare module '*.md' {
-    const src: string;
-    export default src;
+  const src: string;
+  export default src;
 }
 
 declare module '*.svg' {
   import * as React from 'react';
 
-  export const ReactComponent: React.FunctionComponent<React.SVGProps<
-    SVGSVGElement
-  > & { title?: string }>;
+  export const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
 
   const src: string;
   export default src;
@@ -80,4 +80,10 @@ declare module '*.module.less' {
 
 declare module '*.less';
 
-declare module 'react-syntax-highlighter/dist/esm/languages/prism'
+declare module 'react-syntax-highlighter/dist/esm/languages/prism';
+
+declare module 'faker';
+
+declare interface Window {
+  IS_GITHUB: 'true' | 'false';
+}
