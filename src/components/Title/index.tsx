@@ -10,7 +10,9 @@ const Title = (props: { children: string }) => {
     if (ref.current) {
       scrollIntoView(ref.current);
     }
-    window.location.hash = children;
+    if (process.env.REACT_APP_IS_GITHUB !== 'true') {
+      window.location.hash = children;
+    }
   };
 
   return (
