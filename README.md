@@ -2,7 +2,7 @@
 
 ## 功能清单
 
-- [-] 升级至 react18
+- [x] 升级至 react18
 
 > https://zh-hans.reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
 
@@ -28,7 +28,7 @@ root.render(<App />);
 React.FC => React.FC<{ children: React.ReactNode }>
 ```
 
-- [-] 升级 react-router6
+- [x] 升级 react-router6
   > https://juejin.cn/post/7052933770260938783
 
 1、移除`react-router-config`使用`useRoutes(routes)`代替
