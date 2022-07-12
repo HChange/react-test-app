@@ -1,8 +1,8 @@
-# 用于测试 React 功能、特性的项目
+# 此项目用于测试 React 功能、特性
 
 ## 功能清单
 
-- [x] 升级至 react18
+- [x] **升级至 react18**
 
 > https://zh-hans.reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
 
@@ -28,50 +28,54 @@ root.render(<App />);
 React.FC => React.FC<{ children: React.ReactNode }>
 ```
 
-- [x] 升级 react-router6
-  > https://juejin.cn/post/7052933770260938783
+- [x] **升级 react-router6**
 
-1、移除`react-router-config`使用`useRoutes(routes)`代替
-2、`<NavLink/>` 的 `activeClass`被移除了使用`classNames={(isActive:boolean)=>string}` 代替
-3、`routes` 数据格式变动，`conponent(React.ComponentType<RouteConfigComponentProps<any>> | React.ComponentType | undefined)` =>`element(ReactNode)`
-4、`<Redirect />` => `<Navigate/>`
+ > https://juejin.cn/post/7052933770260938783
+
+1、移除`react-router-config`使用`useRoutes(routes)`代替 
+
+2、`<NavLink/>` 的 `activeClass`被移除了使用`classNames={(isActive:boolean)=>string}` 代替 
+
+3、`routes` 数据格式变动，`conponent(React.ComponentType<RouteConfigComponentProps<any>> | React.ComponentType | undefined)` =>`element(ReactNode)` 
+
+4、`<Redirect />` => `<Navigate/>` 
+
 5、子路由页面渲染`<Outlet />`
 
----
 
 - [ ] 国际化
 
----
 
 - [ ] 主题切换
 
----
 
 - [ ] storybook
 
----
 
 - [ ] 首页白屏
 
----
 
 - [ ] 升级至 react18
 
 ## 问题清单
 
-### git cz 不生效
+**git cz 不生效**
 
+```bash
 commitizen init cz-conventional-changelog --save --save-exact
+```
 
-### 设置 git 对大小写感知敏感
+**设置 git 对大小写感知敏感**
 
+```bash
 git config core.ignorecase false
+```
 
-### 当想给 index.html 注入其他环境变量时
+**当想给 index.html 注入其他环境变量时**
 
 可以 `REACT_APP_*`，或者直接修改 env.js 的 getClientEnvironment 函数
 
-### 给 Window 添加属性
+**给 Window 添加属性**
 
 ```javascript
 declare interface Window {
@@ -79,6 +83,8 @@ declare interface Window {
 }
 ```
 
-### windows 全局命令执行不了？ 如 yarn
+**windows 全局命令执行不了？ 如 yarn**
 
+```bash
 set-ExecutionPolicy RemoteSigned
+```
