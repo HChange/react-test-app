@@ -4,6 +4,8 @@
 
 - [-] 升级至 react18
 
+> https://zh-hans.reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
+
 1、更新依赖
 
 ```bash
@@ -27,11 +29,13 @@ React.FC => React.FC<{ children: React.ReactNode }>
 ```
 
 - [-] 升级 react-router6
+  > https://juejin.cn/post/7052933770260938783
 
 1、移除`react-router-config`使用`useRoutes(routes)`代替
 2、`<NavLink/>` 的 `activeClass`被移除了使用`classNames={(isActive:boolean)=>string}` 代替
 3、`routes` 数据格式变动，`conponent(React.ComponentType<RouteConfigComponentProps<any>> | React.ComponentType | undefined)` =>`element(ReactNode)`
 4、`<Redirect />` => `<Navigate/>`
+5、子路由页面渲染`<Outlet />`
 
 ---
 
