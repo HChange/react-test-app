@@ -1,5 +1,3 @@
-import { renderRoutes } from 'react-router-config';
-
 const About = (props: any) => {
   console.log('render');
 
@@ -16,7 +14,6 @@ const About = (props: any) => {
       >
         进度：流水线测试...
       </div>
-      {renderRoutes(props.route.routes)}
     </>
   );
 };

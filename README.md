@@ -1,5 +1,58 @@
 # 用于测试 React 功能、特性的项目
 
+## 功能清单
+
+- [-] 升级至 react18
+
+1、更新依赖
+
+```bash
+yarn add react react-dom
+yarn add @types/react-dom @types/react -D
+```
+
+2、使用新 API 挂载 root
+
+```tsx
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<App />);
+```
+
+3、修改代码
+
+```txt
+- React.FC中将移除默认的`children`属性，如果严格模式下会报错
+React.FC => React.FC<{ children: React.ReactNode }>
+```
+
+- [-] 升级 react-router6
+
+1、移除`react-router-config`使用`useRoutes(routes)`代替
+2、`<NavLink/>` 的 `activeClass`被移除了使用`classNames={(isActive:boolean)=>string}` 代替
+3、`routes` 数据格式变动，`conponent(React.ComponentType<RouteConfigComponentProps<any>> | React.ComponentType | undefined)` =>`element(ReactNode)`
+4、`<Redirect />` => `<Navigate/>`
+
+---
+
+- [ ] 国际化
+
+---
+
+- [ ] 主题切换
+
+---
+
+- [ ] storybook
+
+---
+
+- [ ] 首页白屏
+
+---
+
+- [ ] 升级至 react18
+
 ## 问题清单
 
 ### git cz 不生效

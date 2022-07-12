@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef } from 'react';
-import { useRouteMatch } from 'react-router';
-import routes from '@/config/routes';
+import { useLocation } from 'react-router';
+import { routes } from '@/config/routes';
 import styles from './index.less';
 import { PageProps } from './types';
 import { drawGrid } from '@/utils';
@@ -12,9 +12,9 @@ import {
   MAX_HEIGHT,
 } from './constants';
 const Page: React.FC<PageProps> = (props) => {
-  const { path } = useRouteMatch();
+  const { pathname } = useLocation();
   const defaultTitle = routes.filter((item) => {
-    return item.path === path;
+    return item.path === pathname;
   })[0].name;
   const { children, title = defaultTitle, backLine = true } = props;
 

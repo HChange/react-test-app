@@ -1,6 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { RouteConfig } from 'react-router-config';
+import { Navigate, useRoutes, RouteObject } from 'react-router-dom';
 import About from '@/pages/about';
 import Markdown from '@/pages/markdown';
 import MarkdownIt from '@/pages/markdown-it';
@@ -9,47 +8,55 @@ import Test from '@/pages/test/index';
 import VirtualList from '@/pages/virtuallist';
 import JsonDownload from '@/pages/json-download';
 
+export interface RouteConfig extends RouteObject {
+  name?: string;
+}
 const routes: RouteConfig[] = [
   {
     path: '/',
-    exact: true,
-    render: () => <Redirect to={{ pathname: '/about' }} />,
+    element: <Navigate to={{ pathname: '/about' }} />,
   },
   {
     path: '/about',
-    component: About,
+    element: <About />,
     name: '关于',
   },
   {
     path: '/test',
-    component: Test,
+    element: <Test />,
     name: '测试',
   },
   {
     path: '/markdown',
-    component: Markdown,
+    element: <Markdown />,
     name: 'Markdown',
   },
   {
     path: '/markdown-it',
-    component: MarkdownIt,
+    element: <MarkdownIt />,
     name: 'MarkdownIt',
   },
   {
     path: '/recoil',
-    component: RecoilTest,
+    element: <RecoilTest />,
     name: 'Recoil',
   },
   {
     path: '/virtuallist',
-    component: VirtualList,
+    element: <VirtualList />,
     name: '虚拟长列表',
   },
   {
     path: '/json-download',
-    component: JsonDownload,
+    element: <JsonDownload />,
     name: 'Json下载',
   },
 ];
 
-export default routes;
+function RenderRoutes() {
+  const element = useRoutes(routes);
+  return element;
+}
+export { routes };
+
+export default RenderRoutes;

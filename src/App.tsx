@@ -1,13 +1,14 @@
 import React from 'react';
-import { renderRoutes } from 'react-router-config';
 import { RecoilRoot } from 'recoil';
-import routes from './config/routes';
 import Layout from './layout';
+import RenderRoutes from './config/routes';
 
 function App() {
   return (
     <RecoilRoot>
-      <Layout>{renderRoutes(routes)}</Layout>
+      <Layout>
+        <RenderRoutes />
+      </Layout>
     </RecoilRoot>
   );
 }

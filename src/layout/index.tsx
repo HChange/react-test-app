@@ -1,11 +1,10 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useMemo } from 'react';
 import { BrowserRouter, NavLink, HashRouter } from 'react-router-dom';
-import routes from '../config/routes';
+import { RouteConfig, routes } from '../config/routes';
 import styles from './index.less';
-import { RouteConfig } from 'react-router-config';
 
-const Layout: React.FC<{}> = (props) => {
+const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
   // 根据hash定位页面滚动位置
   useEffect(() => {
     if (process.env.REACT_APP_IS_GITHUT === 'true') return;
@@ -21,13 +20,13 @@ const Layout: React.FC<{}> = (props) => {
   const createNav = (routes: RouteConfig[]) => {
     return (
       <ul>
-        {routes.map(({ name, path, routes }) => {
+        {routes.map(({ name, path }) => {
           if (path === '/') {
             return null;
           } else {
             return (
               <li key={name}>
-                <NavLink to={path as any} activeClassName={styles.active}>
+                <NavLink to={path as any} className={({ isActive }) => (isActive ? styles.active : '')}>
                   {name}
                 </NavLink>
               </li>
@@ -38,13 +37,13 @@ const Layout: React.FC<{}> = (props) => {
     );
   };
 
-  const Router: any = useMemo(() => {
+  const RouterWrapper = useMemo(() => {
     return process.env.REACT_APP_IS_GITHUB === 'true' ? HashRouter : BrowserRouter;
   }, []);
 
   return (
     <div className={styles.wrapper}>
-      <Router>
+      <RouterWrapper>
         <header className={styles.header}>
           <div className={styles.logo}>Change Test</div>
         </header>
@@ -53,7 +52,7 @@ const Layout: React.FC<{}> = (props) => {
           <article className={styles.content}>{props.children}</article>
         </main>
         {/* <footer className={styles.footer} /> */}
-      </Router>
+      </RouterWrapper>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface PageProps {
   title?: string;
   /**
@@ -5,4 +7,5 @@ export interface PageProps {
    * @default true
    */
   backLine?: false | { color?: any; stepx?: number; stepy?: number; lineWidth?: number };
+  children?: ReactNode;
 }

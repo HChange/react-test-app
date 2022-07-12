@@ -53,6 +53,7 @@ const Marked = (props: MarkedProps) => {
     <div className={classnames(styles.marked, { className })} style={style}>
       <div className={classnames(styles['marked-content'])}>
         {markContent && <div dangerouslySetInnerHTML={{ __html: markContent }} />}
+        {/* @ts-ignore */}
         <CopyToClipboard text={code} onCopy={copyAction}>
           <span className={styles['marked-content__copy']}>{copyText}</span>
         </CopyToClipboard>

@@ -5,7 +5,7 @@ import React from 'react';
  * 锚点
  * @param to 锚点对应的id名
  */
-const AnchorPoint: React.FC<{ to: string }> = (props) => {
+const AnchorPoint: React.FC<{ to: string; children: any }> = (props) => {
   const { to, children } = props;
 
   const goAction = () => {

@@ -25,6 +25,7 @@ const CodeBlock: React.FC<Props> = ({ language, value }) => {
   // 	SyntaxHighlighter.registerLanguage('typescript', typescript);
   // }, []);
   return (
+    // @ts-ignore
     <SyntaxHighlighter language={language} style={materialOceanic}>
       {value}
     </SyntaxHighlighter>

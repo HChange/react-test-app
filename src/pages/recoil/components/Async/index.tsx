@@ -4,6 +4,7 @@ import AsyncModule from './AsyncModules';
 
 const Async = () => {
   return (
+    // @ts-ignore
     <ErrorBoundary message>
       <Suspense fallback={<>加载中...</>}>
         <AsyncModule />

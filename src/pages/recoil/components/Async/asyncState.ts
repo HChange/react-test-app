@@ -2,7 +2,7 @@ import { selector, selectorFamily } from 'recoil';
 import { mockRequest } from './mockRequest';
 
 export const asyncState = selector({
-  key: 'asyncState',
+  key: 'asyncState1',
   get: async ({ get }) => {
     let res;
     try {
