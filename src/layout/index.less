@@ -31,7 +31,7 @@
       width: 160px;
       background: @primary-font-color;
       height: 100%;
-      overflow: scroll;
+      overflow: hidden;
       ul,
       li {
         padding: 0;
@@ -42,13 +42,13 @@
       }
 
       ul {
-        // height: calc(100% - 62px);
+        height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
       }
 
       ul::-webkit-scrollbar {
-        // display: none;
+        display: none;
       }
       li {
         width: 100%;
@@ -75,7 +75,7 @@
     .content {
       flex: 1;
       background: #f3f3f3;
-      overflow: scroll;
+      overflow-y: scroll;
     }
   }
 }

@@ -12,7 +12,7 @@ git config core.ignorecase false
 
 ### 当想给 index.html 注入其他环境变量时
 
-可以`REACT_APP_* `，或者直接修改 env.js 的 getClientEnvironment 函数
+可以 `REACT_APP_*`，或者直接修改 env.js 的 getClientEnvironment 函数
 
 ### 给 Window 添加属性
 
@@ -21,3 +21,7 @@ declare interface Window {
   IS_GITHUB: 'true' | 'false';
 }
 ```
+
+### windows 全局命令执行不了？ 如 yarn
+
+set-ExecutionPolicy RemoteSigned

@@ -47,8 +47,6 @@ const VirtualList = () => {
 
   useEffect(() => {
     let dom = virtualWrapper.current;
-    console.log(dom);
-
     scrollEvent();
     if (dom) {
       dom.addEventListener('scroll', scrollEvent);

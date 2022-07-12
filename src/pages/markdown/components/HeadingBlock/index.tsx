@@ -19,9 +19,11 @@ const HeadingBlock: React.FC<{ level: number; children: any[] }> = (props) => {
     return (
       <Heading level={`h${level}`} id={nodeValue}>
         <span className="title">{children}</span>
-        <a href={`#${nodeValue}`} className="link">
-          #
-        </a>
+        {process.env.REACT_APP_IS_GITHUB !== 'true' && (
+          <a href={`#${nodeValue}`} className="link">
+            #
+          </a>
+        )}
       </Heading>
     );
   } else {
