@@ -69,7 +69,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
         <div className={styles.languages}>
           <Select
             style={{ width: '100px', marginRight: '20px' }}
-            value={i18n.language}
+            value={languages.includes(i18n.language) ? i18n.language : 'zh'}
             options={options}
             onChange={(v) => handleChangeLanguage(v.toString())}
           />
