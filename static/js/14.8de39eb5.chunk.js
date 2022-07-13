@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-test-app"]=this["webpackJsonpreact-test-app"]||[]).push([[14],{160:function(e,t,s){"use strict";s.r(t);var c=s(20),n=s(107),r=s(39);t.default=function(e){return console.log("render"),Object(r.jsx)(r.Fragment,{children:Object(r.jsxs)("div",{style:{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"},children:[Object(r.jsx)(n.b,{to:"/about/process",children:"\u5f53\u524d\u8fdb\u5ea6"}),"\u8fdb\u5ea6\uff1a\u6d41\u6c34\u7ebf\u6d4b\u8bd5...",Object(r.jsx)(c.b,{})]})})}}}]);
+//# sourceMappingURL=14.8de39eb5.chunk.js.map
