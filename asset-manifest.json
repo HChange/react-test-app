@@ -3,8 +3,8 @@
     "static/js/0.40064391.chunk.js": "/react-test-app/static/js/0.40064391.chunk.js",
     "static/js/0.40064391.chunk.js.map": "/react-test-app/static/js/0.40064391.chunk.js.map",
     "main.css": "/react-test-app/static/css/main.ff26da0e.chunk.css",
-    "main.js": "/react-test-app/static/js/main.4e701aa4.chunk.js",
-    "main.js.map": "/react-test-app/static/js/main.4e701aa4.chunk.js.map",
+    "main.js": "/react-test-app/static/js/main.66e9b3bc.chunk.js",
+    "main.js.map": "/react-test-app/static/js/main.66e9b3bc.chunk.js.map",
     "runtime-main.js": "/react-test-app/static/js/runtime-main.b370da06.js",
     "runtime-main.js.map": "/react-test-app/static/js/runtime-main.b370da06.js.map",
     "static/js/3.dd0826eb.chunk.js": "/react-test-app/static/js/3.dd0826eb.chunk.js",
@@ -64,6 +64,6 @@
     "static/css/5.3266757a.chunk.css",
     "static/js/5.dea0ac8f.chunk.js",
     "static/css/main.ff26da0e.chunk.css",
-    "static/js/main.4e701aa4.chunk.js"
+    "static/js/main.66e9b3bc.chunk.js"
   ]
 }
