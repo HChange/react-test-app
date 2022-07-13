@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useEffect, useMemo } from 'react';
+import React, { Suspense, useEffect, useMemo } from 'react';
 import { BrowserRouter, NavLink, HashRouter } from 'react-router-dom';
 import { RouteConfig, routes } from '../config/routes';
 import styles from './index.less';
@@ -49,7 +49,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
         </header>
         <main className={styles.main}>
           <nav className={styles.nav}>{createNav(routes)}</nav>
-          <article className={styles.content}>{props.children}</article>
+          <article className={styles.content}>
+            <Suspense fallback={<>加载中...</>}>{props.children}</Suspense>
+          </article>
         </main>
         {/* <footer className={styles.footer} /> */}
       </RouterWrapper>

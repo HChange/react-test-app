@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Navigate, useRoutes, RouteObject } from 'react-router-dom';
-import About from '@/pages/about';
-import Markdown from '@/pages/markdown';
-import MarkdownIt from '@/pages/markdown-it';
-import RecoilTest from '@/pages/recoil/index';
-import Test from '@/pages/test/index';
-import VirtualList from '@/pages/virtuallist';
-import JsonDownload from '@/pages/json-download';
-
+const About = lazy(() => import('@/pages/about'));
+const Markdown = lazy(() => import('@/pages/markdown'));
+const MarkdownIt = lazy(() => import('@/pages/markdown-it'));
+const RecoilTest = lazy(() => import('@/pages/recoil/index'));
+const Test = lazy(() => import('@/pages/test/index'));
+const VirtualList = lazy(() => import('@/pages/virtuallist'));
+const JsonDownload = lazy(() => import('@/pages/json-download'));
 export interface RouteConfig extends RouteObject {
   name?: string;
 }
