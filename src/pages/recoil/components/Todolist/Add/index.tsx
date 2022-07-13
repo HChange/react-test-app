@@ -1,4 +1,4 @@
-import { Button, Input, notification } from 'antd';
+import { Button, Input, notification } from 'tdesign-react';
 import React, { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { todolistState } from '../todolistState';
@@ -14,7 +14,7 @@ const Add = () => {
   const setRecords = useSetRecoilState(todolistState);
   const addAction = () => {
     if (!value) {
-      notification.error({ message: '请输入有效值' });
+      notification.error({ content: '请输入有效值' });
     } else {
       setRecords((prev) => [{ id: getId(), isComplete: false, text: value }, ...prev]);
       setValue('');
@@ -23,8 +23,8 @@ const Add = () => {
 
   return (
     <div style={{ display: 'flex' }}>
-      <Input onChange={(e) => setValue(e.target.value)} value={value} />
-      <Button type="primary" onClick={addAction}>
+      <Input onChange={(v) => setValue(v.toString())} value={value} />
+      <Button theme="primary" onClick={addAction}>
         添加
       </Button>
     </div>

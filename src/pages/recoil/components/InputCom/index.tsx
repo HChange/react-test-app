@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input } from 'tdesign-react';
 import { useRecoilState } from 'recoil';
 import { nameState } from '../../recoilState';
 
@@ -8,7 +8,7 @@ const InputCom = () => {
 
   return (
     <div>
-      <Input value={name} onChange={(e) => setName(e.target.value)} />
+      <Input value={name} onChange={(v) => setName(v.toString())} />
       <div>输入的名字是：{name}</div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 import { Navigate, useRoutes, RouteObject } from 'react-router-dom';
 const About = lazy(() => import('@/pages/about'));
+const AboutProcess = lazy(() => import('@/pages/about/pages/process'));
 const Markdown = lazy(() => import('@/pages/markdown'));
 const MarkdownIt = lazy(() => import('@/pages/markdown-it'));
 const RecoilTest = lazy(() => import('@/pages/recoil/index'));
@@ -19,6 +20,12 @@ const routes: RouteConfig[] = [
     path: '/about',
     element: <About />,
     name: '关于',
+    children: [
+      {
+        path: '/about/process',
+        element: <AboutProcess />,
+      },
+    ],
   },
   {
     path: '/test',

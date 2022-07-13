@@ -1,4 +1,6 @@
 @import '~highlight.js/styles/monokai.css';
+@import 'tdesign-react/es/style/index.css'; /* 少量公共样式*/
+/* @import '~antd/dist/antd.css'; */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
