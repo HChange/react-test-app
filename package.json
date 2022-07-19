@@ -97,7 +97,7 @@
     "build": "node scripts/build.js",
     "start:github": "cross-env REACT_APP_IS_GITHUB=true PUBLIC_URL='/react-test-app' node scripts/start.js",
     "build:github": "cross-env REACT_APP_IS_GITHUB=true PUBLIC_URL='/react-test-app' node scripts/build.js",
-    "build:analyzer": "cross-env REACT_APP_IS_ANALYZER=true node scripts/build.js",
+    "build:analyzer": "cross-env REACT_APP_ANALYZER=true node scripts/build.js",
     "test": "node scripts/test.js",
     "code": "node scripts/codeToString",
     "code:watch": "cross-env WATCH=true node scripts/codeToString "

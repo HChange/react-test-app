@@ -34,7 +34,7 @@ const appPackageJson = require(paths.appPackageJson);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-const shouldUseAnalyzer = process.env.REACT_APP_ANALYZER !== 'false';
+const shouldUseAnalyzer = process.env.REACT_APP_ANALYZER === 'true';
 
 const webpackDevClientEntry = require.resolve(
   'react-dev-utils/webpackHotDevClient'
@@ -605,7 +605,7 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
-			shouldUseAnalyzer&&(new WebpackAnalyzerPlugin({analyzerPort: 9090})),
+			shouldUseAnalyzer&&new WebpackAnalyzerPlugin({analyzerPort: 9090}),
       new HtmlWebpackPlugin(
         Object.assign(
           {},
