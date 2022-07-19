@@ -2,8 +2,6 @@ import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 const About = (props: any) => {
-  console.log('render');
-
   return (
     <>
       <div

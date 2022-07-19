@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { memo, useEffect, useMemo, useRef } from 'react';
 import { useLocation } from 'react-router';
 import { routes } from '@/config/routes';
 import styles from './index.less';
@@ -11,7 +11,7 @@ import {
   gridWidthMultiply,
   MAX_HEIGHT,
 } from './constants';
-const Page: React.FC<PageProps> = (props) => {
+const Page: React.FC<PageProps> = memo((props) => {
   const { pathname } = useLocation();
   const defaultTitle = routes.filter((item) => {
     return item.path === pathname;
@@ -82,7 +82,7 @@ const Page: React.FC<PageProps> = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export { Page };
 export * from './types';

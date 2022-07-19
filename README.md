@@ -102,7 +102,9 @@ import './config/locales';
 
 - [ ] 首页白屏
 
-- [ ] 升级至 react18
+- [ ] 登录界面
+
+- [x] 升级至 react18
 
 ## 问题清单
 

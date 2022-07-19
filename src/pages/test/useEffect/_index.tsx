@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const index = () => {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
+  const [count1, setCount1] = useState(Math.random());
+  const [count2, setCount2] = useState(Math.random());
 
+  const notFirst = useRef(false);
   React.useEffect(() => {
+    if (notFirst.current === false) {
+      return;
+    }
     // 耗时 300 毫秒的计算
     const start = Number(new Date());
     while (Number(new Date()) - start <= 300) {
@@ -16,6 +20,10 @@ const index = () => {
   }, [count1]);
 
   React.useLayoutEffect(() => {
+    if (notFirst.current === false) {
+      return;
+    }
+
     // 耗时 300 毫秒的计算
     const start = Number(new Date());
     while (Number(new Date()) - start <= 300) {
@@ -26,8 +34,14 @@ const index = () => {
     }
   }, [count2]);
 
-  const handleClick1 = React.useCallback(() => setCount1(0), []);
-  const handleClick2 = React.useCallback(() => setCount2(0), []);
+  const handleClick1 = React.useCallback(() => {
+    setCount1(0);
+    notFirst.current = true;
+  }, []);
+  const handleClick2 = React.useCallback(() => {
+    setCount2(0);
+    notFirst.current = true;
+  }, []);
   return (
     <div>
       <div>

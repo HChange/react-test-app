@@ -6,6 +6,7 @@ import { Select, SelectOption } from 'tdesign-react';
 import { RouteConfig, routes } from '../config/routes';
 import styles from './index.less';
 import { languages } from '@/locales';
+import { Loading } from '@/components';
 
 /**
  * 布局
@@ -79,7 +80,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
         <main className={styles.main}>
           <nav className={styles.nav}>{createNav(routes)}</nav>
           <article className={styles.content}>
-            <Suspense fallback={<>加载中...</>}>{props.children}</Suspense>
+            <Suspense fallback={<Loading />}>{props.children}</Suspense>
           </article>
         </main>
         {/* <footer className={styles.footer} /> */}

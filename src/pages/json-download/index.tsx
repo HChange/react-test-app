@@ -1,6 +1,6 @@
 /* eslint-disable react/no-this-in-sfc */
 import { Page } from '@/components';
-import React from 'react';
+import React, { memo } from 'react';
 
 const JsonDownload = () => {
   const download = () => {
@@ -51,4 +51,4 @@ const JsonDownload = () => {
   );
 };
 
-export default JsonDownload;
+export default memo(JsonDownload);
