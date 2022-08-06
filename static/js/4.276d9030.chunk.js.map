@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/about/pages/process/index.tsx"],"names":["Process"],"mappings":"wHAAA,uBAMeA,UAJC,WACd,OAAO","file":"static/js/4.276d9030.chunk.js","sourcesContent":["import React from 'react';\n\nconst Process = () => {\n  return <div>Process</div>;\n};\n\nexport default Process;\n"],"sourceRoot":""}
