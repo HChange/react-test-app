@@ -96,7 +96,10 @@ export default i18n;
 import './config/locales';
 ```
 
-- [ ] 主题切换
+- [x] 主题切换
+
+> 使用:root、:root[theme-mode='dark']{}、var()
+> 主题切换 document.documentElement.setAttribute('theme-mode','dark');
 
 - [ ] storybook
 
