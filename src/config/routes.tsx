@@ -1,11 +1,12 @@
 import React, { lazy } from 'react';
 import { Navigate, useRoutes, RouteObject } from 'react-router-dom';
+import { t } from './locales';
 const About = lazy(() => import('@/pages/about'));
 const AboutProcess = lazy(() => import('@/pages/about/pages/process'));
 // const Markdown = lazy(() => import('@/pages/markdown'));
 // const MarkdownIt = lazy(() => import('@/pages/markdown-it'));
 // const RecoilTest = lazy(() => import('@/pages/recoil/index'));
-// const Test = lazy(() => import('@/pages/test/index'));
+const Test = lazy(() => import('@/pages/test/index'));
 // const VirtualList = lazy(() => import('@/pages/virtuallist'));
 // const JsonDownload = lazy(() => import('@/pages/json-download'));
 export interface RouteConfig extends RouteObject {
@@ -19,7 +20,7 @@ const routes: RouteConfig[] = [
   {
     path: '/about',
     element: <About />,
-    name: '关于',
+    name: t('routes.about'),
     children: [
       {
         path: '/about/process',
@@ -27,11 +28,11 @@ const routes: RouteConfig[] = [
       },
     ],
   },
-  // {
-  //   path: '/test',
-  //   element: <Test />,
-  //   name: '测试',
-  // },
+  {
+    path: '/test',
+    element: <Test />,
+    name: t('routes.test'),
+  },
   // {
   //   path: '/markdown',
   //   element: <Markdown />,

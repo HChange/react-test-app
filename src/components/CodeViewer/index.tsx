@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './index.less';
 import { CodeViewerProps } from './types';
+import { t } from '@/config/locales';
 
 const CodeViewer = (props: CodeViewerProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,7 +15,7 @@ const CodeViewer = (props: CodeViewerProps) => {
           className={classNames(styles['code-viewer__show-btn'], { [styles['code-viewer__show-btn-open']]: isOpen })}
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          {isOpen ? '关闭代码' : '展开代码'}
+          {isOpen ? t('components.CodeViewer.hide') : t('components.CodeViewer.show')}
         </span>
       </div>
       <div className={classNames(styles['code-viewer__code'], { [styles['code-viewer__code-open']]: isOpen })}>

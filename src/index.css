@@ -161,13 +161,14 @@ body,
 * {
   box-sizing: border-box;
   font-family: Microsoft YaHei;
+  /* color: var(--td-text-color-primary); */
 }
 body {
   margin: 0;
   font-family: Microsoft YaHei;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
+  color: var(--td-text-color-primary);
 }
 .docs {
   width: 100%;
@@ -208,4 +209,13 @@ body {
   color: #fefefe;
   font-size: 14px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+  --border-radius-default: 4px;
+}
+
+::selection {
+  background-color: var(--td-brand-color);
+  color: #fff;
 }

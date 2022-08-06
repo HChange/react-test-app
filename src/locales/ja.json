@@ -3,5 +3,26 @@
     "zh": "中国語",
     "en": "英語",
     "ja": "日本語"
+  },
+  "routes": {
+    "about": "約",
+    "test": "テスト"
+  },
+  "pages": {
+    "about": {
+      "waid": "私は何をやっている？",
+      "locale": "グローバル化",
+      "theme": "テーマスイッチ"
+    }
+  },
+  "components": {
+    "CodeViewer": {
+      "show": "コードを表示",
+      "hide": "コードを隠す"
+    },
+    "Marked": {
+      "copy": "コピー",
+      "copied": "コピーした"
+    }
   }
 }

@@ -7,10 +7,10 @@ export const canvasCurrentWidthMultiply = canvasWidthMultiply / gridWidthMultipl
 
 // 线条默认配置
 export const defaultConfig = {
-  color: 'red',
-  stepx: 20,
-  stepy: 20,
-  lineWidth: 0.15,
+  color: '#eee',
+  stepx: 15,
+  stepy: 15,
+  lineWidth: 0.4,
 };
 
 // 最大内容高度限制

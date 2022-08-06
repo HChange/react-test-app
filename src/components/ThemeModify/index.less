@@ -1,0 +1,38 @@
+.theme-modify {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  box-shadow: 3px 3px 10px #aaa;
+  border-radius: 45px 0px 0px 45px;
+  transition: all 0.5s;
+  z-index: 999;
+  &:hover {
+    right: 0px !important;
+  }
+  .theme-button {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    &--first {
+      border-radius: 45px 0px 0px 45px;
+    }
+    &__mask {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      transform-origin: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+      text-align: center;
+      line-height: 90px;
+      color: #fff;
+      font-weight: bolder;
+    }
+  }
+}

@@ -3,5 +3,26 @@
     "zh": "中文",
     "en": "英文",
     "ja": "日文"
+  },
+  "routes": {
+    "about": "关于",
+    "test": "测试"
+  },
+  "pages": {
+    "about": {
+      "waid": "我正在做什么？",
+      "locale": "国际化",
+      "theme": "主题切换"
+    }
+  },
+  "components": {
+    "CodeViewer": {
+      "show": "显示代码",
+      "hide": "隐藏代码"
+    },
+    "Marked": {
+      "copy": "复制",
+      "copied": "已复制"
+    }
   }
 }

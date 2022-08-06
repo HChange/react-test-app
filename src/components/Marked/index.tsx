@@ -6,6 +6,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { MarkedProps } from './types';
 import styles from './index.less';
 import { reg } from './constants';
+import { t } from '@/config/locales';
 
 /**
  * 字符串代码--->代码库
@@ -14,7 +15,7 @@ const Marked = (props: MarkedProps) => {
   const { children, type, className, style = {}, onCopy } = props;
   const [code, setCode] = useState<string>('');
   const [markContent, setMarkContent] = useState<string>('');
-  const [copyText, setCopyText] = useState('复制');
+  const [copyText, setCopyText] = useState(t('components.Marked.copy'));
   useEffect(() => {
     if (children) {
       setCode(children.match(reg)?.[1] || '');
@@ -40,9 +41,9 @@ const Marked = (props: MarkedProps) => {
 
   const copyAction = useCallback((text: string, result: boolean) => {
     // 拷贝成功交互
-    setCopyText('已复制');
+    setCopyText(t('components.Marked.copied'));
     setTimeout(() => {
-      setCopyText('复制');
+      setCopyText(t('components.Marked.copy'));
     }, 2000);
     if (onCopy) {
       onCopy(text, result);

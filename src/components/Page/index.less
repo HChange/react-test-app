@@ -3,35 +3,19 @@
 .wrapper {
   width: 100%;
   padding: 20px 40px;
-  // overflow-y: scroll;
-  // height: 100%;
-  background: @primary-bg-color;
   min-width: 600px;
 
   .page {
-    background-color: #f5f5d5;
+    background-color: var(--td-bg-color-container);
     width: 100%;
     min-height: 100%;
-    border-radius: 2px;
+    border-radius: var(--border-radius-default);
     padding: 0px 20px;
     // border: 1px solid rgba(253, 165, 0, 0);
-    box-shadow: 8px 8px 18px @weak-font-color;
+    box-shadow: 8px 8px 18px var(--td-gray-color-6);
     display: flex;
     flex-direction: column;
     position: relative;
-    .canvas-wrapper {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .canvas {
-        width: 100%;
-      }
-    }
 
     &-content {
       position: relative;
@@ -42,7 +26,7 @@
         line-height: 80px;
         font-size: 24px;
         font-weight: bolder;
-        // border-bottom: 1px @weak-font-color dashed;
+        color: var(--td-brand-color);
         .ellipsis();
       }
       .content {
@@ -51,7 +35,6 @@
       }
       .footer {
         height: 40px;
-        // border-top: 1px @weak-font-color dashed;
       }
     }
   }

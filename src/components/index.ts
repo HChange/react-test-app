@@ -5,3 +5,5 @@ export * from './AnchorPoint';
 export * from './CodeViewer';
 export * from './Marked';
 export * from './Loading';
+export * from './BackLine';
+export * from './ThemeModify';

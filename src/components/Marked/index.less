@@ -6,7 +6,7 @@
     position: relative;
     width: auto;
     height: auto;
-    border-radius: 2px;
+    border-radius: var(--border-radius-default);
     overflow: hidden;
     & > div > pre {
       font-size: 0;
@@ -15,25 +15,26 @@
       display: block;
     }
     &__copy {
-      display: none;
+      user-select: none;
       position: absolute;
       font-size: 12px;
-      background-color: @primary-color-3;
+      background-color: var(--td-brand-color);
       right: 10px;
       top: 10px;
-      width: 42px;
-      height: 24px;
+      padding: 0 4px;
+      // width: 42px;
+      height: 22px;
       // border: 1px solid red;
-      border-radius: 4px;
+      border-radius: var(--border-radius-default);
       text-align: center;
-      line-height: 24px;
+      line-height: 22px;
       color: #fff;
       cursor: pointer;
       &:hover {
-        background-color: @primary-color-3;
+        background-color: var(--td-brand-color);
       }
       &:active {
-        background-color: @primary-color;
+        background-color: var(--td-brand-color-10);
       }
     }
   }

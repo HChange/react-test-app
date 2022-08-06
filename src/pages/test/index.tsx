@@ -6,8 +6,8 @@ import Effect from './useEffect/_index';
 const Text = () => {
   return (
     <>
-      <Page backLine={{ stepx: 20, stepy: 20 }}>
-        <Block title="useEffect&useLayoutEffect区别">
+      <Page>
+        <Block title="useEffect VS useLayoutEffect">
           <CodeViewer render={<Effect />} code={<Marked>{codeString}</Marked>} />
         </Block>
       </Page>

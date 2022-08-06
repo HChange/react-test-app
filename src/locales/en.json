@@ -3,5 +3,26 @@
     "zh": "Chinese",
     "en": "English",
     "ja": "Japanese"
+  },
+  "routes": {
+    "about": "About",
+    "test": "Test"
+  },
+  "pages": {
+    "about": {
+      "waid": "What am i doing?",
+      "locale": "Globalization",
+      "theme": "Theme Switch"
+    }
+  },
+  "components": {
+    "CodeViewer": {
+      "show": "Show Code",
+      "hide": "Hide Code"
+    },
+    "Marked": {
+      "copy": "Copy",
+      "copied": "Copied"
+    }
   }
 }

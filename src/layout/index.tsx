@@ -6,8 +6,7 @@ import { Select, SelectOption } from 'tdesign-react';
 import { RouteConfig, routes } from '../config/routes';
 import styles from './index.less';
 import { languages } from '@/locales';
-import { Loading } from '@/components';
-
+import { Loading, ThemeModify } from '@/components';
 /**
  * 布局
  */
@@ -53,6 +52,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
   // 处理语言切换
   const handleChangeLanguage = (val: string) => {
     i18n.changeLanguage(val);
+    // 刷新页面
+    window.location.reload();
   };
 
   const options = useMemo(() => {
@@ -66,7 +67,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <div className={styles.logo}>Change Test</div>
+        <div className={styles.logo} data-text="Change Test">
+          Change Test
+        </div>
         <div className={styles.languages}>
           <Select
             style={{ width: '100px', marginRight: '20px' }}
@@ -85,6 +88,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
         </main>
         {/* <footer className={styles.footer} /> */}
       </RouterWrapper>
+
+      <ThemeModify />
     </div>
   );
 };
