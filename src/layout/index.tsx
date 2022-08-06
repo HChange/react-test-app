@@ -64,6 +64,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
     return _options;
   }, [t]);
 
+  const currentLanguage = useMemo(() => {
+    const prevLanguage = i18n.language.split('-')[0].toLowerCase();
+    return languages.includes(prevLanguage) ? prevLanguage : 'zh';
+  }, [i18n.language]);
+
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
@@ -73,7 +78,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
         <div className={styles.languages}>
           <Select
             style={{ width: '100px', marginRight: '20px' }}
-            value={languages.includes(i18n.language) ? i18n.language : 'zh'}
+            value={currentLanguage}
             options={options}
             onChange={(v) => handleChangeLanguage(v.toString())}
           />
