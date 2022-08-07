@@ -12,7 +12,8 @@
     "about": {
       "waid": "私は何をやっている？",
       "locale": "グローバル化",
-      "theme": "テーマスイッチ"
+      "theme": "テーマスイッチ",
+      "mobile": "モバイル端末対応"
     }
   },
   "components": {

@@ -6,7 +6,8 @@ import { Select, SelectOption } from 'tdesign-react';
 import { RouteConfig, routes } from '../config/routes';
 import styles from './index.less';
 import { languages } from '@/locales';
-import { Loading, ThemeModify } from '@/components';
+import { Loading, NavWrapper, ThemeModify } from '@/components';
+
 /**
  * 布局
  */
@@ -86,7 +87,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = (props) => {
       </header>
       <RouterWrapper>
         <main className={styles.main}>
-          <nav className={styles.nav}>{createNav(routes)}</nav>
+          <NavWrapper>
+            <nav className={styles.nav}>{createNav(routes)}</nav>
+          </NavWrapper>
           <article className={styles.content}>
             <Suspense fallback={<Loading />}>{props.children}</Suspense>
           </article>

@@ -20,9 +20,16 @@ export const Nodes = [
     data: { label: t('pages.about.theme') },
     position: { x: 270, y: 125 },
   },
+  {
+    id: '4',
+    // type: 'output',
+    data: { label: t('pages.about.mobile') },
+    position: { x: 440, y: 125 },
+  },
 ];
 
 export const Edges = [
   { id: 'e1-2', source: '1', target: '2' },
-  { id: 'e1-3', source: '1', target: '3', animated: true },
+  { id: 'e1-3', source: '1', target: '3' },
+  { id: 'e1-4', source: '1', target: '4', animated: true },
 ];

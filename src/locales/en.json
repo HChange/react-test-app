@@ -12,7 +12,8 @@
     "about": {
       "waid": "What am i doing?",
       "locale": "Globalization",
-      "theme": "Theme Switch"
+      "theme": "Theme Switch",
+      "mobile": "Mobile terminal adaptation"
     }
   },
   "components": {

@@ -12,7 +12,8 @@
     "about": {
       "waid": "我正在做什么？",
       "locale": "国际化",
-      "theme": "主题切换"
+      "theme": "主题切换",
+      "mobile": "移动端适配"
     }
   },
   "components": {

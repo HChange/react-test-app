@@ -7,3 +7,5 @@ export * from './Marked';
 export * from './Loading';
 export * from './BackLine';
 export * from './ThemeModify';
+export * from './NavWrapper';
+export * from './GlobalContextWrapper';

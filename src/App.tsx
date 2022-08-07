@@ -2,13 +2,16 @@ import React from 'react';
 import { RecoilRoot } from 'recoil';
 import Layout from './layout';
 import RenderRoutes from './config/routes';
+import { GlobalContextWrapper } from './components';
 
 function App() {
   return (
     <RecoilRoot>
-      <Layout>
-        <RenderRoutes />
-      </Layout>
+      <GlobalContextWrapper>
+        <Layout>
+          <RenderRoutes />
+        </Layout>
+      </GlobalContextWrapper>
     </RecoilRoot>
   );
 }
