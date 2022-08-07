@@ -16,7 +16,7 @@ export enum ThemeEnum {
 }
 
 export const themePanelMap = {
-  [ThemeEnum.LIGHT]: 'linear-gradient(135deg,#ffffff,#ffffff,#b19ffb)',
-  [ThemeEnum.DARK]: 'linear-gradient(135deg,var(--td-gray-color-13),#b19ffb)',
-  [ThemeEnum.CHERRY]: 'linear-gradient(135deg,#ffffff,#d6657d)',
+  [ThemeEnum.LIGHT]: 'linear-gradient(-45deg,#ffffff 50%,#b19ffb 50%)',
+  [ThemeEnum.DARK]: 'linear-gradient(-45deg,var(--td-gray-color-13) 50%,#b19ffb 50%)',
+  [ThemeEnum.CHERRY]: 'linear-gradient(-45deg,#ffffff 50%,#d6657d 50%)',
 };
