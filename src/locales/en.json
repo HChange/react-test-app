@@ -13,7 +13,9 @@
       "waid": "What am i doing?",
       "locale": "Globalization",
       "theme": "Theme Switch",
-      "mobile": "Mobile terminal adaptation"
+      "mobile": "Mobile terminal adaptation",
+      "mock": "mock server",
+      "next": "next.js study"
     }
   },
   "components": {

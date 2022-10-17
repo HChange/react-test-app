@@ -16,16 +16,11 @@ const Marked = (props: MarkedProps) => {
   const [code, setCode] = useState<string>('');
   const [markContent, setMarkContent] = useState<string>('');
   const [copyText, setCopyText] = useState(t('components.Marked.copy'));
+
   useEffect(() => {
     if (children) {
       setCode(children.match(reg)?.[1] || '');
       marked.setOptions({
-        renderer: new marked.Renderer(),
-        highlight: function (code) {
-          return (
-            '<pre class="hljs"><code>' + hljs.highlightAuto(code, type ? [type] : undefined).value + '</code></pre>'
-          );
-        },
         pedantic: false,
         gfm: true,
         breaks: false,
@@ -33,7 +28,27 @@ const Marked = (props: MarkedProps) => {
         smartLists: true,
         smartypants: false,
         xhtml: false,
+        // headerIds: true,
+        // headerPrefix: 'md-header',
       });
+      const renderer: Partial<marked.Renderer> = {
+        heading(text: string, level: number) {
+          return `
+									<h${level} class="__anchor__" id="#${text}">
+										${text}
+									</h${level}>`;
+        },
+        table(header, body) {
+          return `<div class="cg-table"><table>${header}${body}</table></div>`;
+        },
+      };
+
+      const highlight = (code: string) => {
+        return '<pre class="hljs"><code>' + hljs.highlightAuto(code, type ? [type] : undefined).value + '</code></pre>';
+      };
+
+      marked.use({ renderer, highlight });
+
       const markedContentd = marked(children);
       setMarkContent(markedContentd);
     }
