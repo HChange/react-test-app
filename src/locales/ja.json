@@ -14,8 +14,8 @@
       "locale": "グローバル化",
       "theme": "テーマスイッチ",
       "mobile": "モバイル端末対応",
-      "mock": "mock サーバ",
-      "next": "next.js 勉強"
+      "mock": "Mock サーバ",
+      "next": "Next.js 勉強"
     }
   },
   "components": {

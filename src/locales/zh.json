@@ -14,8 +14,8 @@
       "locale": "国际化",
       "theme": "主题切换",
       "mobile": "移动端适配",
-      "mock": "mock 服务器",
-      "next": "next.js 学习"
+      "mock": "Mock 服务器",
+      "next": "Next.js 学习"
     }
   },
   "components": {

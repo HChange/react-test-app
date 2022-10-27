@@ -14,8 +14,8 @@
       "locale": "Globalization",
       "theme": "Theme Switch",
       "mobile": "Mobile terminal adaptation",
-      "mock": "mock server",
-      "next": "next.js study"
+      "mock": "Build a mock server",
+      "next": "Learn Next.js"
     }
   },
   "components": {
